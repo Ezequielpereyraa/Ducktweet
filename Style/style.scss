@@ -1,0 +1,238 @@
+$colorBorder: rgb(56, 56, 56);
+$colorFont: #aeb6bf;
+$colorTouch: rgb(7, 172, 248);
+$colorBackground: #010102;
+
+* {
+  box-sizing: border-box;
+  font-style: 15px;
+}
+
+body {
+  background-color: $colorBackground;
+  margin: 0;
+}
+
+.contenedor {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.header {
+  position: fixed;
+  z-index: 2;
+  display: flex;
+  margin-right: 3rem;
+
+  &__list {
+    list-style: none;
+  }
+
+  &__icons {
+    color: $colorFont;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    transition: 0.1s ease-in;
+
+    &:hover {
+      color: $colorTouch;
+    }
+  }
+
+  &__icons-text {
+    font-weight: bold;
+
+    .fas {
+      padding-right: 1rem;
+    }
+  }
+
+  &__icons:nth-last-child(1) {
+    background-color: $colorTouch;
+    padding: 0.6rem 2.6rem;
+    border-radius: 30rem;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: rgb(10, 114, 161);
+    }
+  }
+
+  &__user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-self: center;
+    transform: translateY(210px);
+    margin-left: 1rem;
+
+    &-img {
+      width: 2rem;
+      height: 2rem;
+      border-radius: 100%;
+    }
+
+    &-name {
+      margin-left: 0.4rem;
+      font-size: 0.9rem;
+      color: #757474;
+      span {
+        color: $colorFont;
+      }
+    }
+  }
+}
+
+.content__news {
+  margin-left: 250px;
+  width: 600px;
+  padding: 0;
+  border-top: none;
+  border: 1px solid $colorBorder;
+  padding: 0.2rem;
+
+  .content__title {
+    background-color: $colorBackground;
+    z-index: 2;
+    position: fixed;
+    margin-top: 0;
+    top: 0;
+    left: 50;
+    width: 31%;
+    height: 2.5rem;
+    padding: 1.2rem;
+    border-bottom: 0.5px solid $colorBorder;
+    color: $colorFont;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    i {
+      color: $colorTouch;
+    }
+  }
+
+  .tweet-write {
+    margin-top: 3rem;
+    padding: 0;
+    display: flex;
+    border-bottom: 9px solid $colorBorder;
+
+    &__icons {
+      cursor: pointer;
+      color: rgb(7, 172, 248);
+      font-size: 1.2rem;
+      padding: 0 0.4rem;
+
+      &:hover {
+        transform: scale(1.1, 1.1);
+      }
+    }
+
+    &__img {
+      border-radius: 100%;
+      width: 4.3rem;
+      height: 3rem;
+      margin: 0 0.3rem;
+      margin-top: 0;
+      padding: 0;
+    }
+
+    &__area {
+      margin: 0 auto;
+      background-color: $colorBackground;
+      border: none;
+      font-size: 1.2rem;
+      color: white;
+      width: 486px;
+      height: 40px;
+    }
+
+    &__boton {
+      transform: translateX(230px);
+      margin-top: 0.5rem;
+      color: white;
+      font-weight: bold;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 30rem;
+      background-color: $colorTouch;
+      margin-bottom: 0.7rem;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        background-color: rgb(10, 114, 161);
+      }
+    }
+  }
+
+  .tweet {
+    cursor: pointer;
+    border-top: 1px solid $colorBorder;
+    border-bottom: 1px solid $colorBorder;
+    display: flex;
+    padding: 0.2rem;
+    margin: 0px;
+    width: 100%;
+    justify-content: center;
+
+    .content-tweet__icons {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
+    &__icons {
+      color: #2e2d2d;
+      font-size: 1.2rem;
+      padding: 0.1rem 3.6rem;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        color: $colorTouch;
+      }
+    }
+
+    &__img {
+      border-radius: 100%;
+      width: 3rem;
+      height: 3rem;
+      margin-top: 0.6rem;
+    }
+
+    &__user {
+      display: flex;
+      flex-direction: column;
+      width: 87%;
+      margin: 0.4rem;
+    }
+
+    &__name {
+      margin: 0;
+      font-size: 0.8rem;
+      color: #6e767d;
+    }
+
+    span {
+      font-weight: bold;
+      font-size: 1rem;
+      color: $colorFont;
+    }
+
+    &__descriptions {
+      margin-top: 0.2rem;
+      color: $colorFont;
+      font-weight: 300;
+      margin-bottom: 0.2rem;
+    }
+  }
+}
