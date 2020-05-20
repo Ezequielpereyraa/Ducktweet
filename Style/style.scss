@@ -83,6 +83,7 @@ body {
       margin-left: 0.4rem;
       font-size: 0.9rem;
       color: #757474;
+
       span {
         color: $colorFont;
       }
@@ -105,7 +106,7 @@ body {
     margin-top: 0;
     top: 0;
     left: 50;
-    width: 31%;
+    width: 34.2%;
     height: 2.5rem;
     padding: 1.2rem;
     border-bottom: 0.5px solid $colorBorder;
@@ -146,13 +147,17 @@ body {
     }
 
     &__area {
-      margin: 0 auto;
+      margin-left: 1rem;
+      resize: none;
       background-color: $colorBackground;
       border: none;
       font-size: 1.2rem;
       color: white;
-      width: 486px;
-      height: 40px;
+      width: 480px;
+      height: 60px;
+      &:focus {
+        outline: 0;
+      }
     }
 
     &__boton {
